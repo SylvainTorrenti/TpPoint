@@ -12,25 +12,44 @@ namespace TpPoint
         private int _abscissa;
         private int _ordered;
         #endregion
-        #region Get & Set Abscissa
-        public int Abscissa { get => _abscissa; set => _abscissa = value; }
-        #endregion
-        #region Get & Set Ordered
-        public int Ordered { get => _ordered; set => _ordered = value; }
-        #endregion
         #region Constructor
+        /// <summary>
+        /// Defaut constructor
+        /// </summary>
         public Point()
         {
         }
         #endregion
+        #region Get & Set Abscissa
+        /// <summary>
+        /// Abscissa
+        /// </summary>
+        public int Abscissa { get => _abscissa; set => _abscissa = value; }
+        #endregion
+        #region Get & Set Ordered
+        /// <summary>
+        /// Ordered
+        /// </summary>
+        public int Ordered { get => _ordered; set => _ordered = value; }
+        #endregion       
         #region Method
-        private double Carre(double Coordonee)
+        /// <summary>
+        /// Calculate square
+        /// </summary>
+        /// <param name="Coordonee"></param>
+        /// <returns></returns>
+        private double Square(double Coordonee)
         {
             return Coordonee * Coordonee;
         }
+        /// <summary>
+        /// The one-point standard
+        /// </summary>
+        /// <param name="point"></param>
+        /// <returns></returns>
         public double Norme(Point point)
         {
-            return Math.Sqrt(Carre(0 - Abscissa) + Carre(0 - Ordered));
+            return Math.Sqrt(Square(0 - Abscissa) + Square(0 - Ordered));
         } 
         #endregion
     }
