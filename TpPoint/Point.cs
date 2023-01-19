@@ -19,6 +19,11 @@ namespace TpPoint
         public Point()
         {
         }
+        public Point(int abscissa, int ordered)
+        {
+            _abscissa = abscissa;
+            _ordered = ordered;
+        }
         #endregion
         #region Get & Set Abscissa
         /// <summary>
@@ -34,22 +39,13 @@ namespace TpPoint
         #endregion       
         #region Method
         /// <summary>
-        /// Calculate square
-        /// </summary>
-        /// <param name="Coordonee"></param>
-        /// <returns></returns>
-        private double Square(double Coordonee)
-        {
-            return Coordonee * Coordonee;
-        }
-        /// <summary>
         /// The one-point standard
         /// </summary>
         /// <param name="point"></param>
         /// <returns></returns>
-        public double Norme(Point point)
+        public double Norme()
         {
-            return Math.Sqrt(Square(0 - Abscissa) + Square(0 - Ordered));
+            return Math.Sqrt(Math.Pow(0 - Abscissa,2) + Math.Pow(0 - Ordered,2));
         } 
         #endregion
     }
