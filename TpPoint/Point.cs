@@ -45,7 +45,7 @@ namespace TpPoint
         /// <returns></returns>
         public double Norme()
         {
-            return Math.Sqrt(Math.Pow(0 - Abscissa,2) + Math.Pow(0 - Ordered,2));
+            return Math.Sqrt(Math.Pow(Abscissa,2) + Math.Pow(Ordered,2));
         } 
         #endregion
     }
